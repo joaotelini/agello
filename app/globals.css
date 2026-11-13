@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply bg-offwhite font-sans text-charcoal antialiased; }
+  ::selection { @apply bg-mint-200 text-charcoal; }
+  :focus-visible { @apply rounded-md outline-none ring-2 ring-mint-500 ring-offset-2 ring-offset-offwhite; }
+}
+
+@layer components {
+  .container-x { @apply mx-auto w-full max-w-6xl px-5 sm:px-8; }
+  .section { @apply py-20 sm:py-24; }
+  .eyebrow { @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-mint-700; }
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold transition-colors; }
+  .btn-primary { @apply bg-mint-500 text-charcoal hover:bg-mint-600; }
+  .btn-secondary { @apply border border-charcoal/15 bg-white text-charcoal hover:bg-black/[0.03]; }
+  .card { @apply rounded-2xl border border-charcoal/10 bg-white shadow-soft; }
+}
